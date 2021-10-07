@@ -1,0 +1,9 @@
+Create a Workflows, under the automation, and execute on > create > skip the criteria > Action > Custom function.
+
+In the custom function, select the module as "Tickets" and edit arguments > map the argument mapping to the "ticketid -> Ticket ID", and use this code,
+
+orgId = "please use your ORGID";
+prefix="somepre******x the required "+ticketId;
+updateresp = zoho.desk.update(orgId,"tickets", ticketId,{"cf":{"cf******me":prefix}});
+
+Note:  //replace custom field api name inside double quotes in cf******me
